@@ -1,3 +1,4 @@
+(function(){
 b=document.body;
 h=b.parentNode;
 n=b.cloneNode(true);
@@ -21,4 +22,4 @@ nl=(nl<-5)?-4:nl;
 s.top=nt+'px';
 s.left=nl+'px'
 },10);
-return true;
+})();
