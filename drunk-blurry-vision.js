@@ -7,7 +7,8 @@ s=n.style;
 s.width='100%';
 s.position='absolute';
 s.top=0;
-s.opacity=.5;
+s.opacity=0.5;
+s.filter='alpha(opacity=50)';
 setInterval(function(){
 t=s.top;
 l=s.left;
@@ -18,6 +19,6 @@ nt=(nt<-5)?-4:nt;
 nl=(nl>5)?4:nl;
 nl=(nl<-5)?-4:nl;
 s.top=nt+'px';
-s.left=nl+'px';
+s.left=nl+'px'
 },10);
-void(0);
+return true;
