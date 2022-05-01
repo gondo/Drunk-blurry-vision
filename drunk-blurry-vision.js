@@ -1,18 +1,23 @@
-(function(){
-b=document.body;
-h=b.parentNode;
+(_ => {
+w=window;
+d=document;
+b=d.body;
 n=b.cloneNode(true);
-h.appendChild(n);
-h.style.overflow='hidden';
+bs=b.style;
+bcs=w.getComputedStyle(b);
+bs.opacity=0.7;
+h=b.parentNode;
+e=d.createElement('div');
+es=e.style;
+es.overflow='hidden';
+es.width='100%';
+es.height=bcs.height;
+es.position='absolute';
+es.filter='blur(1px)';
+es.top=0;
+e.appendChild(n);
+h.appendChild(e);
 s=n.style;
-<<<<<<< HEAD
-s.width='100%';
-s.position='absolute';
-s.top=0;
-s.opacity=0.5;
-s.filter='alpha(opacity=50)';
-setInterval(function(){
-=======
 s.width=bcs.width;
 s.marginLeft=bcs.marginLeft;
 s.position='absolute';
@@ -23,7 +28,6 @@ s.width=bcs.width;
 s.marginLeft=bcs.marginLeft;
 };
 setInterval(_ => {
->>>>>>> 2447975 (fixed ff)
 t=s.top;
 l=s.left;
 nt=t.substring(0,t.length-2)*1+Math.ceil(Math.random()*3)-2;
