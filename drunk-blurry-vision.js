@@ -5,12 +5,25 @@ n=b.cloneNode(true);
 h.appendChild(n);
 h.style.overflow='hidden';
 s=n.style;
+<<<<<<< HEAD
 s.width='100%';
 s.position='absolute';
 s.top=0;
 s.opacity=0.5;
 s.filter='alpha(opacity=50)';
 setInterval(function(){
+=======
+s.width=bcs.width;
+s.marginLeft=bcs.marginLeft;
+s.position='absolute';
+s.top=0;
+s.opacity=0.7;
+w.onresize=_ => {
+s.width=bcs.width;
+s.marginLeft=bcs.marginLeft;
+};
+setInterval(_ => {
+>>>>>>> 2447975 (fixed ff)
 t=s.top;
 l=s.left;
 nt=t.substring(0,t.length-2)*1+Math.ceil(Math.random()*3)-2;
